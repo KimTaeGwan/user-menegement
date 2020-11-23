@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+#contents{padding:40px 0; width:100%}
+
+#contents h3, 
+#contents h4{font-family:'Noto_kr'; line-height:1.2em; }
+#contents h3{text-align:center;letter-spacing:-2px; margin-bottom:40px;font-size:3.76rem; }
+#contents h3 b{display:inline-block;height:4rem;;line-height:100%;text-indent:4rem;position:relative; color:#222}
+#contents h3 b:before{content:''; width:20px; height:36px; position:absolute; top:0; left:0; background:#334B81; -webkit-transform:skew(-45deg, 0deg); -moz-transform:skew(-45deg, 0deg); -ms-transform:skew(-45deg, 0deg); -o-transform:skew(-45deg, 0deg); transform:skew(-45deg, 0deg); }
+
+.article{margin-bottom:2.5em; padding:10px;}
+.article small{display:flex;margin:-5px 0 1em 0;font-size:inherit;}
+.article hr{margin:1em auto;}
+
+.mypage_btn{text-align:center;margin-bottom:50px; }
+.mypage_btn li{float:left;width:23.5%;margin-right:2%;margin-bottom:5px;}
+.mypage_btn li:last-child{margin-right:0}
+.mypage_btn li a{display:block;border:1px solid #d9dde1;padding:210px 10px 35px 10px;font-size:18px;color:#444;}
+.mypage_btn li a span{display:block;font-size:16px;color:#767676;}
+.mypage_btn li:nth-child(1) a{background:url(../img/mypage_btn_bg01.png) no-repeat center 35px;}
+.mypage_btn li:nth-child(2) a{background:url(../img/mypage_btn_bg04.png) no-repeat center 35px;}
+.mypage_btn li a:hover,.mypage_btn li a:focus{border:1px solid #e81c24}
+.mypage_btn:after{clear:both;content:"";display:block}
+
+
+ @media all and (max-width:1279px) {
+	#contents{padding:40px 0; width:98%}
+	
+ }
+ 
+ @media all and (max-width:1024px) {
+ 	.mypage_btn li{width:49%;margin-right:2%;}
+ 	.mypage_btn li a{padding:170px 10px 25px 10px;background-size:120px !important}
+ 	.mypage_btn li:nth-child(2n){margin-right:0}
+ 	
+ }
+ 
+  @media all and (max-width:767px) { 
+  	#contents h3{ margin-bottom:20px;font-size:2.4rem;} 
+  	#contents h3 b{ text-indent:2.5rem;}
+	#contents h3 b:before{content:''; width:15px; height:25px;top:0; left:0; }
+	
+	.mypage_btn{margin-bottom:30px}
+	.mypage_btn li a{padding:140px 10px 25px 10px;background-size:100px !important;background-position-y:20px !important;font-size:16px}
+	.mypage_btn li a span{display:none}
+	
+  }

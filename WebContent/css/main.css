@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+#header .right{ right:20px; top:30px;  position:absolute;}
+#header li{ display:inline-block}
+#header .right li a{ color:#fff; padding-left:25px}
+#header .right li .login{ background:url("../img/login_icon.png") no-repeat 0 center;}
+#header .right li .join{ background:url("../img/join_icon.png") no-repeat 0 center; margin-left:20px}
+  
