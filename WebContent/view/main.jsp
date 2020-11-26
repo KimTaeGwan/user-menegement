@@ -1,4 +1,3 @@
-<%@page import="jsp.userInfo.UserInfoBean"%>
 <%@ page language="java" contentType="text/html; charset=utf-8" 
 	pageEncoding="utf-8"%>
 <%
@@ -7,19 +6,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>회원가입 완료</title>
-		
+	<title>메인 페이지</title>
+	
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0">
 	
 	<link rel='stylesheet' type='text/css' href='../css/common.css'/>
-	<link rel='stylesheet' type='text/css' href='../css/joinCom.css'/>
+	<link rel='stylesheet' type='text/css' href='../css/myPage.css'/>
 	
 </head>
 <body>
-	<%
-		String id = (String)session.getAttribute("id");
-		String name = (String)session.getAttribute("name");
-	%>
+<%
+	session.invalidate();
+%>
 	<div id = "wrapper">
 		<div id = "header"></div>
 		
@@ -27,22 +25,19 @@
 			<a class = "main" href = "./main.jsp"> <img src="../img/logo.png"> </a>
 		</div>
 		
-		
-		<div id = "contents">
-	 		<h3><img src = "../img/joinCom.png"></h3>
-	 		<div class="gb_box box-0 tc">
-        		
-        	<p><b><span style = "color: blue;"><%= name %></span></b>님 회원가입이 완료되었습니다.<br />
-       			회원님의 아이디는 <b><span style = "color: blue; font-size: 20px;"><%= id %></span></b> 입니다.
-       		</p>
-        
-		        <div class="booking_btn">
-		            <a href="./main.jsp" class="check box-1">메인 페이지 가기</a>
-		        </div>
-    		</div>       
+		<div id="contents">
+			
+			<div class="article">
+				<ul class="mypage_btn">
+					<li><a href="./joinForm.jsp">회원가입</a></li>
+					<li><a href="./findID.jsp">ID 찾기</a></li>
+				</ul>
+			</div>		
 		</div>
 		
+		
 	</div>
+	
 	<div id = "footer">
 		<div class="f_b">							
 			<div class="container pad20">
@@ -59,6 +54,5 @@
 			</div>
 		</div>
 	</div>
-	
 </body>
 </html>

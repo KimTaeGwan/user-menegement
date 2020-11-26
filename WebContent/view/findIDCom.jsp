@@ -1,3 +1,4 @@
+<%@page import="jsp.userInfo.UserInfoBean"%>
 <%@ page language="java" contentType="text/html; charset=utf-8" 
 	pageEncoding="utf-8"%>
 <%
@@ -6,35 +7,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>메인 페이지</title>
-	
+	<title>회원가입 완료</title>
+		
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0">
 	
 	<link rel='stylesheet' type='text/css' href='../css/common.css'/>
-	<link rel='stylesheet' type='text/css' href='../css/myPage.css'/>
+	<link rel='stylesheet' type='text/css' href='../css/joinCom.css'/>
 	
 </head>
 <body>
+	<%
+		String id = (String)session.getAttribute("id");
+	%>
 	<div id = "wrapper">
 		<div id = "header"></div>
 		
 		<div class = "sivisual">
-			<a class = "main" href = "../main.jsp"> <img src="../img/logo.png"> </a>
+			<a class = "main" href = "./main.jsp"> <img src="../img/logo.png"> </a>
 		</div>
 		
-		<div id="contents">
-			<h3><img src = "../img/mypage.png"></h3>
-			<div class="article">
-				<ul class="mypage_btn">
-					<li><a href="./modfiyForm.jsp">회원정보수정<span>기본회원정보 수정</span></a></li>
-					<li><a href="./deleteForm.jsp">회원탈퇴<span>시설관리공단 회원탈퇴</span></a></li>
-				</ul>
-			</div>		
-		</div>
 		
+		<div id = "contents">
+	 		
+	 		<div class="gb_box box-0 tc">
+        		
+        	<p>
+       			회원님의 아이디는 <b><span style = "color: blue; font-size: 20px;"><%=id %></span></b> 입니다.
+       		</p>
+        
+		        <div class="booking_btn">
+		            <a href="./main.jsp" class="check box-1">메인 페이지 가기</a>
+		        </div>
+    		</div>       
+		</div>
 		
 	</div>
-	
 	<div id = "footer">
 		<div class="f_b">							
 			<div class="container pad20">
@@ -51,5 +58,6 @@
 			</div>
 		</div>
 	</div>
+	
 </body>
 </html>

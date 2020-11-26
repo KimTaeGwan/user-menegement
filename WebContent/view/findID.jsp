@@ -21,14 +21,14 @@
 		function loginCheckForm(){
 			inputForm = eval("document.loginForm");
 			
-			if(!inputForm.id.value){
-				alert("아이디를 입력하세요");
+			if(!inputForm.name.value){
+				alert("이름을 입력하세요.");
 				inputForm.id.focus();
 				return false;
 			}
 			
-			if(!inputForm.pw.value){
-				alert("비밀번호를 입력하세요");
+			if(!inputForm.ph.value){
+				alert("전화번호를 입력하세요.");
 				inputForm.pw.focus();
 				return false;
 			}
@@ -43,37 +43,34 @@
 		<div id = "header"></div>
 		
 		<div class = "sivisual">
-			<a class = "main" href = "../main.jsp"> <img src="../img/logo.png"> </a>
+			<a class = "main" href = "./main.jsp"> <img src="../img/logo.png"> </a>
 		</div>
 		
 		
 		<div id="contents">
-			<h3> <img src = "../img/login.png"> </h3>
+			<h3> <b> 아이디 찾기 </b> </h3>
 			<div class="loginF">
-				<form name = "loginForm" action="../pro/loginPro.jsp" method = "post" 
+				<form name = "loginForm" action="../pro/findIDPro.jsp" method = "post" 
 					onsubmit = "return loginCheckForm()">
 					<fieldset>
 						<div class = "login_inp">
 							<ul>
 								<li>
-									<label for="id">아이디</label>
-									<input name="id" title="아이디를 입력하여주세요" id="userId" type="text" value="">
+									<label for="name">이름</label>
+									<input type="text" name="name">
 								</li>
 								<li>
-									<label for="pw">비밀번호</label>
-									<input name="pw" title="비밀번호를 입력하여주세요" id="userPassword" type="password" value="">
+									<label for="pw">전화번호</label>
+									<input type="text" name="ph">
 								</li>
 							</ul>
 							<span>
-								<input class="login_btn" type="submit" value="로그인" title="로그인하기">
-							</span> 
+								<input class="login_btn" type="submit" value="찾기" title="로그인하기">
+							</span>
+							
 						</div>
-						<div class="idpwfg">
-							<ul class="bbs_btn">
-								<li><span>아이디와 비밀번호를 잊으셨나요?</span> <a href="">아이디/비밀번호찾기 </a> </li>
-								<li><span>아직 회원가입을 하지 않으셨나요?</span> <a href="./joinFormAgree.jsp">회원가입하기 </a></li>
-							</ul>
-						</div>
+						
+						
 					</fieldset>
 				</form>
 			</div>

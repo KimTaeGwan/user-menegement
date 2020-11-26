@@ -10,8 +10,8 @@
 #contents h3 b{display:inline-block;height:4rem;;line-height:100%;text-indent:4rem;position:relative; color:#222}
 #contents h3 b:before{content:''; width:20px; height:36px; position:absolute; top:0; left:0; background:#334B81; -webkit-transform:skew(-45deg, 0deg); -moz-transform:skew(-45deg, 0deg); -ms-transform:skew(-45deg, 0deg); -o-transform:skew(-45deg, 0deg); transform:skew(-45deg, 0deg); }
 
-.tb-responsive{border-top:2px solid #6a6e6d; }
-.tb-responsive table {width:100%;border-collapse:collapse;border-spacing:0;box-sizing:border-box;}
+.tb-responsive{margin:auto; width:760px; border-top:2px solid #6a6e6d; }
+.tb-responsive table {margin:auto; width:760px;border-collapse:collapse;border-spacing:0;box-sizing:border-box;}
 .tb-responsive th,.tb-responsive td{padding:15px; border-bottom:1px solid #ddd; vertical-align:middle;}
 .tb-responsive th {background-color:#f7f7f7; width:20%}
 
